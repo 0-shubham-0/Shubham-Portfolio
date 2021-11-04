@@ -3,11 +3,13 @@
     --primary-color:rgb(70, 240, 234);
     --text-color:#C4C6C8;
     --bg-color:rgb(14, 51, 82);
+    --light-blue:rgb(121, 163, 175);
+    --accent:red;
 }
-/* *::before,
+*::before,
 *::after{
-    display: block;
-} */
+    box-sizing: border-box;
+}
 ::-webkit-scrollbar{
     width: .5rem;
 }
@@ -15,7 +17,7 @@
     background: black;
 }
 ::-webkit-scrollbar-thumb{
-    background-color: rgb(255, 0, 0);
+    background-color:var(--accent);
     border-radius: 0.5rem;
 }
 
@@ -29,13 +31,14 @@ header{
     position: fixed;
     width: 100%;
     color: white;
+    z-index:99;
 }
 nav{
     background-color:var(--bg-color);
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    border-radius: 0 0 1rem 1rem;
+    /* border-radius: 0 0 1rem 1rem; */
     font-weight: bold;
 }
 .head-list{
@@ -47,6 +50,9 @@ nav{
     padding: 1rem;
     text-decoration: none;
     color: rgb(255, 242, 242);
+}
+.link:hover{
+    color: var(--accent);
 }
 .banner{
     display: flex;
@@ -60,26 +66,65 @@ nav{
     text-align: left;
 }
 .Name{
-    text-decoration-line: underline;
-    text-decoration-color: red;
-    text-underline-offset: 20%;
-    text-decoration-thickness: 5px;
+    position: relative;
+    width: max-content;
+    display: inline;
+    cursor:none;
+}
+.Name::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: -1rem;
+    bottom: -6px;
+    width: 100%;
+    background:var(--accent);
+    transform: scaleX(0);
+
+    transition: transform 500ms;
+}
+.bar:hover .Name::after{
+    transform: scaleX(1);
 }
 .banner>img{
     max-width: 50%;
     width: 60vw;
 }
+
+.content{
+    padding: 1rem;
+}
 footer{
-    background-color: rgb(121, 163, 175);
+    background-color: var(--light-blue);
     margin-top: 10rem;
     color: white;
     width: 100%;
     border-radius: 1rem 1rem 0 0;
-    position-
     width: 100%;
 }
+.social{
+    text-decoration-line: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 20%;
+    text-decoration-thickness: 4px ;
+}
 footer>div{
-    padding: 1rem 5rem;
+    padding: 1rem 5rem 0rem;
     display: flex;
     justify-content:space-between;
+}
+
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bg-color);
+}
+.button:hover,.button:focus{
+    background-color: var(--accent);
+    transform: scale(1.06);
 }
