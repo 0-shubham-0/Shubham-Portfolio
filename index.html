@@ -16,7 +16,9 @@
                 <li class=""><a class="link" href="#">My Skills</a></li>
                 <li class=""><a class="link" href="">My Projects</a></li>
                 <li class=""><a class="link" href="#">Contact me</a></li>
+                <li><img src="assets/sun.png" id="theme"></li>
             </ol>
+            
         </nav>
     </header>
     
@@ -34,10 +36,13 @@
         <div class="bar">
             <h2 class="Name">About me</h2>
             <p>Hello! I am Shubham Talawadekar SE stutent in IT Engineering. I am currently learning the basics of Java and Web Development. I would like to learn UI/UX design, would love to be a full stck developer in the future. My current small term goal is to learn a few presentable skills which can stnd out in my resume.</p>
+            <br>
+            <div class="subsection">
             <p><strong>College : </strong><a href="https://www.dbit.in/">Don Bosco Institute of Technology</a></p>
             <p><strong>Department : </strong>Information Technology</p>
             <p><strong>Email : </strong>shubhamtalawadekar2002@gmail.com</p>
             <p><strong>Residence :</strong> Mumbai</p>
+        </div>
         </div>
     </section>
 
@@ -63,5 +68,17 @@
         </ul>
     </div>
     </footer>
+
+    <script>
+        var theme = document.getElementById("theme");
+        theme.onclick = function(){
+            document.body.classList.toggle("white-theme")
+        }
+        if(document.body.classList.contains("white-theme")){
+            theme.src="assets/sun.png";
+        }else{
+            theme.src="assets/moon.png"
+        }
+    </script>
 </body>
 </html>
