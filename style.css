@@ -90,10 +90,29 @@ nav{
     max-width: 50%;
     width: 60vw;
 }
-
-.content{
-    padding: 1rem;
+section{
+    display: flex;
+    padding: 5em 5em 2em 5em;
 }
+section a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+section a:hover{
+    color: var(--accent);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     background-color: var(--light-blue);
     margin-top: 10rem;
@@ -113,7 +132,9 @@ footer>div{
     display: flex;
     justify-content:space-between;
 }
-
+footer h3{
+    max-height: 1.5rem;
+}
 .button{
     cursor: pointer;
     display: inline-block;
