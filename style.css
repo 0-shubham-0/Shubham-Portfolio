@@ -3,6 +3,7 @@
     --primary-color:rgb(70, 240, 234);
     --text-color:white;
     --bg-color:rgb(14, 51, 82);
+    --bg-color-light:rgba(6, 24, 39, 0.514);
     --light-blue:rgb(121, 163, 175);
     --accent:red;
 }
@@ -11,6 +12,7 @@
     --primary-color:rgb(14, 51, 82);
     --light-blue:rgb(14, 51, 82);
     --text-color:black;
+    --bg-color-light:rgba(21, 158, 154, 0.74);
 }
 *::before,
 *::after{
@@ -20,7 +22,7 @@
     width: .5rem;
 }
 ::-webkit-scrollbar-track{
-    background: black;
+    background: var(--bg-color-light);
 }
 ::-webkit-scrollbar-thumb{
     background-color:var(--accent);
@@ -96,6 +98,9 @@ nav{
     display: flex;flex-direction: column; gap: 1rem;
     text-align: left;
 }
+.decor{
+    text-decoration: none;
+}
 .Name{
     position: relative;
     width: max-content;
@@ -145,7 +150,11 @@ section::before{
     font-size: 1.5em;
     font-weight: 700;
 }
-
+.about{
+    line-height: 2em;
+    word-spacing: 0.2em;
+    font-size: 1.1em;
+}
 
 
 

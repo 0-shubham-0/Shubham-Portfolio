@@ -14,10 +14,10 @@
             <p>Shubham Talawadekar</p>
             <ol class="head-list">
                 <li class=""><a class="link" href="#about">About me</a></li>
-                <li class=""><a class="link" href="#">My Skills</a></li>
+                <li class=""><a class="link" href="#skill">My Skills</a></li>
                 <li class=""><a class="link" href="">My Projects</a></li>
                 <li class=""><a class="link" href="#footer">Contact me</a></li>
-                <li><img src="assets/sun.png" id="theme"></li>
+                <li><img class="icon" src="assets/sun.png" id="theme"></li>
             </ol>
         </div>
         </nav>
@@ -31,20 +31,20 @@
             </div>
             <p id="about">I am a web developer and a programmer</p>
         </div>
-        <img class="image" src="Assets/profile.svg" alt="">
+        <img class="image" id="profile" src="Assets/profile.svg" alt="">
     </div>
-
+    
     <div class="counter">
     <section >
         <div class="bar">
             <h2 class="Name">About me</h2>
-            <p>Hello! I am Shubham Talawadekar SE stutent in IT Engineering. I am currently learning the basics of Java and Web Development. I would like to learn UI/UX design, would love to be a full stck developer in the future. My current small term goal is to learn a few presentable skills which can stnd out in my resume.</p>
+            <p class="about">Hello! I am Shubham Talawadekar <abbr class="decor" title="Second Year Engineering">SE</abbr>  stutent in <abbr class="decor" title="Information Technology">IT</abbr>  Engineering. I am currently learning the basics of Java and Web Development. I would like to learn UI/UX design, would love to be a full stack developer in the future. My current small term goal is to learn a few presentable skills which can <abbr class="decor" title="Ohh You're actaully reading this. Why are you wasting your time.">stnd</abbr>  out in my resume.</p>
             <br>
             <div class="subsection">
-            <p><strong>College : </strong><a href="https://www.dbit.in/">Don Bosco Institute of Technology</a></p>
+            <p><strong>College : </strong><a href="https://www.dbit.in/"target="blank"> <abbr class="decor" title="Opens college website">Don Bosco Institute of Technology</abbr> </a></p>
             <p><strong>Department : </strong>Information Technology</p>
-            <p><strong>Email : </strong>shubhamtalawadekar2002@gmail.com</p>
-            <p><strong>Residence :</strong> Mumbai</p>
+            <p><strong>Email : </strong><a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRzBxwJMBbPzzjlBbShljrfVZbSlFpDzcssLgxQNKlbCBrCJWpnknplWZSsDhDGChSKxXpTl"target="blank"><abbr class="decor" title="Opens your gmail with my mail id already in sender id">shubhamtalawadekar2002@gmail.com</abbr> </a> </p>
+            <p id="skill"><strong>Residence :</strong><a href="https://www.google.com/maps/place/Sangharsh+Nagar,+Chandivali,+Powai,+Mumbai,+Maharashtra+400072,+India/@19.1062461,72.8996076,17z/data=!3m1!4b1!4m5!3m4!1s0x3be7c7d8cbe05827:0x69b0b5f8dc346a13!8m2!3d19.1083965!4d72.9026029"target="blank"> <abbr class="decor" title="Click for more specific location on map"> Mumbai</abbr></a></p>
         </div>
         </div>
     </section>
@@ -75,13 +75,14 @@
     <script>
         var theme = document.getElementById("theme");
         theme.onclick = function(){
-            document.body.classList.toggle("white-theme")
-        }
+            document.body.classList.toggle("white-theme");
         if(document.body.classList.contains("white-theme")){
-            theme.src="assets/moon.png"
+            theme.src="assets/moon.png";
+            profile.src="assets/profile2.svg"
         }else{
-            theme.src="assets/sun.png"
-        }
+            theme.src="assets/sun.png";
+            profile.src="assets/profile.svg"
+        }}
     </script>
 </body>
 </html>
