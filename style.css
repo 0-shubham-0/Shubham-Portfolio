@@ -37,6 +37,17 @@ body{
     color: var(--primary-color);
     margin: 0;
 }
+.watermark:first-child {
+    position: fixed;
+    margin: 0em auto;
+    font-size: 17rem;
+    font-weight: bolder;
+    opacity: 0.03;
+    overflow: hidden;
+    bottom: 0em;
+    right: -1em;
+    z-index: -1000;
+}
 header{
     position: fixed;
     width: 100%;
