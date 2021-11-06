@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div>
     <header>
         <nav>
             <p>Shubham Talawadekar</p>
             <ol class="head-list">
-                <li class=""><a class="link" href="#">About me</a></li>
+                <li class=""><a class="link" href="#about">About me</a></li>
                 <li class=""><a class="link" href="#">My Skills</a></li>
                 <li class=""><a class="link" href="">My Projects</a></li>
-                <li class=""><a class="link" href="#">Contact me</a></li>
+                <li class=""><a class="link" href="#footer">Contact me</a></li>
                 <li><img src="assets/sun.png" id="theme"></li>
             </ol>
-            
+        </div>
         </nav>
     </header>
     
@@ -28,11 +29,13 @@
                 <p>Hi, my name is</p>
                 <h1 class="Name">Shubham Talawadekar</h1>
             </div>
-            <p>I am a web developer and a programmer</p>
+            <p id="about">I am a web developer and a programmer</p>
         </div>
         <img class="image" src="Assets/profile.svg" alt="">
     </div>
-    <section class="about">
+
+    <div class="counter">
+    <section >
         <div class="bar">
             <h2 class="Name">About me</h2>
             <p>Hello! I am Shubham Talawadekar SE stutent in IT Engineering. I am currently learning the basics of Java and Web Development. I would like to learn UI/UX design, would love to be a full stck developer in the future. My current small term goal is to learn a few presentable skills which can stnd out in my resume.</p>
@@ -55,11 +58,11 @@
             <h2 class="Name">My Work/Projects</h2>
         </div>
     </section>
+</div>
 
 
 
-
-    <footer><div class="bar">
+    <footer id="footer"><div class="bar">
         <h3 class="Name"> My Social Links</h2>
         <ul class="head-list">
             <li><a class="button" href="https://github.com/0-shubham-0" target="blank">Github</a></li>
@@ -75,9 +78,9 @@
             document.body.classList.toggle("white-theme")
         }
         if(document.body.classList.contains("white-theme")){
-            theme.src="assets/sun.png";
-        }else{
             theme.src="assets/moon.png"
+        }else{
+            theme.src="assets/sun.png"
         }
     </script>
 </body>

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
     --primary-color:rgb(70, 240, 234);
-    --text-color:#C4C6C8;
+    --text-color:white;
     --bg-color:rgb(14, 51, 82);
     --light-blue:rgb(121, 163, 175);
     --accent:red;
@@ -9,7 +9,8 @@
 .white-theme{
     --bg-color:rgb(70, 240, 234);
     --primary-color:rgb(14, 51, 82);
-    --light-blue:rgb(14, 51, 82)
+    --light-blue:rgb(14, 51, 82);
+    --text-color:black;
 }
 *::before,
 *::after{
@@ -25,7 +26,9 @@
     background-color:var(--accent);
     border-radius: 0.5rem;
 }
-
+html{
+    scroll-behavior : smooth;
+}
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
@@ -35,7 +38,7 @@ body{
 header{
     position: fixed;
     width: 100%;
-    color: white;
+    color: var(--text-color);
     z-index:99;
 }
 nav{
@@ -54,7 +57,7 @@ nav{
     display: inline-block;
     padding: 1rem;
     text-decoration: none;
-    color: rgb(255, 242, 242);
+    color: var(--text-color);
 
     position: relative;
 }
@@ -121,6 +124,7 @@ nav{
 section{
     display: flex;
     padding: 5em 5em 2em 5em;
+    position: relative;
 }
 section a{
     text-decoration: none;
@@ -129,9 +133,19 @@ section a{
 section a:hover{
     color: var(--accent);
 }
-.subsection{
-    
+.counter{
+    counter-reset: cname;
 }
+section::before{
+    counter-increment: cname;
+    content: counter(cname)" )";
+    position:absolute;
+    left: 40px;
+    top: 5rem;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
 
 
 
@@ -147,7 +161,7 @@ section a:hover{
 footer{
     background-color: var(--light-blue);
     margin-top: 10rem;
-    color: white;
+    color: var(--bg-color);
     width: 100%;
     border-radius: 1rem 1rem 0 0;
     width: 100%;
@@ -158,7 +172,7 @@ footer{
     text-underline-offset: 20%;
     text-decoration-thickness: 4px ;
 }
-footer>div{
+footer > div{
     padding: 1rem 5rem 0rem;
     display: flex;
     justify-content:space-between;
@@ -170,7 +184,7 @@ footer h3{
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    color: white;
+    color: var(--primary-color);
     padding: 1rem;
     margin: 1rem;
     border-radius: 1rem;
