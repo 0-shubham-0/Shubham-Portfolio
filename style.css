@@ -125,9 +125,12 @@ nav{
 .bar:hover .Name::after{
     transform: scaleX(1);
 }
-.banner>img{
+.banner>svg{
     max-width: 50%;
     width: 60vw;
+}
+.svg-hero:hover .color{
+    fill: var(--accent);
 }
 section{
     display: flex;
