@@ -125,9 +125,11 @@ nav{
 .bar:hover .Name::after{
     transform: scaleX(1);
 }
-.banner>svg{
-    max-width: 50%;
-    width: 60vw;
+.svg-hero{
+    width: 50%;
+    height: auto;
+    transform: scale(0.5);
+    padding-right: 5rem;
 }
 .svg-hero:hover .color{
     fill: var(--accent);
@@ -215,5 +217,8 @@ footer div{
     }
     footer div{
         padding: 0.5em 50px;
+    }
+    .svg-hero{
+        transform: scale(1);
     }
 }
