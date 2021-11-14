@@ -52,26 +52,30 @@ header{
     position: fixed;
     width: 100%;
     color: var(--text-color);
+    background-color:var(--bg-color);
     z-index:99;
+    /* border-radius: 0 0 1rem 1rem; */
+
+    
+}
+header h3{
+    padding-left: 2em;
 }
 nav{
-    background-color:var(--bg-color);
-    
-    padding: 1rem 2rem;
-    /* border-radius: 0 0 1rem 1rem; */
     font-weight: bold;
 }
 .head-list{
-    display: flex;
+    display:flex;
     list-style: none;
 }
 .link{
     display: inline-block;
-    padding: 1rem;
     text-decoration: none;
     color: var(--text-color);
+    font-size: small;
 
     position: relative;
+    padding: 0 0.4em 0 0;
 }
 .link:hover{
     color: var(--accent);
@@ -84,7 +88,7 @@ nav{
     background-color: var(--accent);
 
     position: absolute;
-    top: 0;
+    top: -1em;
     width: 0%;
     transition: all ease-in-out 250ms;
 }
@@ -126,14 +130,9 @@ nav{
     transform: scaleX(1);
 }
 .svg-hero{
-    width: 50%;
-    height: auto;
-    transform: scale(0.5);
-    padding-right: 5rem;
+    width: 100%; 
 }
-.svg-hero:hover .color{
-    fill: var(--accent);
-}
+
 section{
     display: flex;
     padding: 5em 5em 5em 5em;
@@ -181,8 +180,8 @@ footer{
     border-radius: 1rem 1rem 0 0;
 }
 footer div{
-    flex-basis: 30%;
     padding: 1em 1em;
+    margin: 0;
 }
 .button{
     cursor: pointer;
@@ -200,9 +199,19 @@ footer div{
 }
 
 @media (min-width: 900px) {
-    nav{
+    header{
         display: flex;
+    flex-basis: 30%;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 1em;
+    }
+    header h3{
+        padding-left: 3em;
+    }
+    .link{
+        font-size: medium;
+        padding: 0 1rem;
     }
     .banner{
         display: flex;
@@ -219,6 +228,5 @@ footer div{
         padding: 0.5em 50px;
     }
     .svg-hero{
-        transform: scale(1);
     }
 }
