@@ -75,7 +75,7 @@ nav{
     font-size: small;
 
     position: relative;
-    padding: 0 0.4em 0 0;
+    padding: 0 0em 0 0;
 }
 .link:hover{
     color: var(--accent);
@@ -135,8 +135,11 @@ nav{
 
 section{
     display: flex;
-    padding: 5em 5em 5em 5em;
+    padding: 5em 5em 5em 2em;
     position: relative;
+}
+section h2{
+    padding-left: 2em;
 }
 section a{
     text-decoration: none;
@@ -153,7 +156,7 @@ section::before{
     content: counter(cname)" )";
     position:absolute;
     left: 40px;
-    top: 5rem;
+    top: 3.3em;
     font-size: 1.5em;
     font-weight: 700;
 }
@@ -180,7 +183,7 @@ footer{
     border-radius: 1rem 1rem 0 0;
 }
 footer div{
-    padding: 1em 1em;
+    padding: 1em 0em;
     margin: 0;
 }
 .button{
@@ -189,7 +192,7 @@ footer div{
     text-decoration: none;
     color: var(--primary-color);
     padding: 1rem;
-    margin: 1rem;
+    margin-left: 1rem;
     border-radius: 1rem;
     background-color: var(--bg-color);
 }
@@ -218,6 +221,15 @@ footer div{
     align-items: center;
     justify-content: space-around;
     text-align: left;
+    }
+    section{
+        padding: 5em 5em 5em 0em;
+    }
+    section p{
+        padding-left: 5em;
+    }
+    section h2{
+        padding-left: 4em;
     }
     footer{
         display: flex;
