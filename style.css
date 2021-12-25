@@ -55,8 +55,6 @@ header{
     background-color:var(--bg-color);
     z-index:99;
     /* border-radius: 0 0 1rem 1rem; */
-
-    
 }
 header h3{
     padding-left: 2em;
@@ -65,17 +63,18 @@ nav{
     font-weight: bold;
 }
 .head-list{
-    display:flex;
     list-style: none;
 }
+header li{
+    float: left;
+}
 .link{
-    display: inline-block;
     text-decoration: none;
     color: var(--text-color);
     font-size: small;
 
     position: relative;
-    padding: 0 0em 0 0;
+    padding: 0 1rem;
 }
 .link:hover{
     color: var(--accent);
@@ -135,6 +134,7 @@ nav{
 
 section{
     display: flex;
+    flex-direction: column;
     padding: 5em 5em 5em 2em;
     position: relative;
 }
@@ -166,7 +166,16 @@ section::before{
     font-size: 1.1em;
 }
 
-
+iframe{
+    display: block; 
+    margin: 0 auto;
+    width:70%; 
+    height:600px;
+}
+.quiz h3{
+    text-align: center;
+    padding: 1em;
+}
 
 
 
@@ -183,8 +192,12 @@ footer{
     border-radius: 1rem 1rem 0 0;
 }
 footer div{
-    padding: 1em 0em;
+    padding: 1em 1em;
     margin: 0;
+}
+.footer-list{
+    display: flex;
+    list-style: none;
 }
 .button{
     cursor: pointer;
@@ -204,10 +217,9 @@ footer div{
 @media (min-width: 900px) {
     header{
         display: flex;
-    flex-basis: 30%;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1em;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 1em;
     }
     header h3{
         padding-left: 3em;
@@ -223,7 +235,7 @@ footer div{
     text-align: left;
     }
     section{
-        padding: 5em 5em 5em 0em;
+        padding: 5em 0em;
     }
     section p{
         padding-left: 5em;
