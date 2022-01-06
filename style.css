@@ -166,11 +166,22 @@ section::before{
     font-size: 1.1em;
 }
 
+.project-name{
+    display: flex;
+    justify-content: space-around;
+}
+.frame{
+    display: flex;
+}
 iframe{
     display: block; 
+    padding: 20px;
     margin: 0 auto;
     width:70%; 
     height:600px;
+}
+.cal{
+    height: 700px;
 }
 .quiz h3{
     text-align: center;
