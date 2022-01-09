@@ -14,11 +14,8 @@
     --text-color:black;
     --bg-color-light:rgba(21, 158, 154, 0.74);
 }
-*,*::before,
+*::before,
 *::after{
-    margin: 0;
-    padding: 0;
-    line-height: 2.5rem;
     box-sizing: border-box;
 }
 ::-webkit-scrollbar{
@@ -54,10 +51,15 @@ body{
 header{
     position: fixed;
     width: 100%;
-    color: var(--text-color);
     background-color:var(--bg-color);
     z-index:99;
-    /* border-radius: 0 0 1rem 1rem; */
+
+    color: var(--text-color);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5em;
 }
 header h3{
     padding-left: 2em;
@@ -69,15 +71,15 @@ nav{
     list-style: none;
 }
 header li{
+    padding: 1rem;
     float: left;
 }
 .link{
     text-decoration: none;
     color: var(--text-color);
-    font-size: small;
 
     position: relative;
-    padding: 0 1rem;
+    
 }
 .link:hover{
     color: var(--accent);
@@ -104,8 +106,10 @@ header li{
 }
 
 .banner{
-    text-align: center;
-    padding-top: 11em;
+    padding-top: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 .decor{
     text-decoration: none;
@@ -228,42 +232,33 @@ footer div{
     transform: scale(1.06);
 }
 
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1em 0;
+        
     }
     header h3{
-        padding-left: 3em;
+        
     }
     .link{
-        font-size: medium;
-        padding: 0 1rem;
+        
     }
     .banner{
-        display: flex;
-    align-items: center;
-    justify-content: space-around;
-    text-align: left;
+        
     }
     section{
-        padding: 5em 0em;
+        
     }
     section p{
-        padding-left: 5em;
+        
     }
     section h2{
-        padding-left: 4em;
+        
     }
     footer{
-        display: flex;
-        align-items:center;
-        justify-content: space-between;
+        
     }
     footer div{
-        padding: 0.5em 50px;
+        
     }
     .svg-hero{
     }
