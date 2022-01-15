@@ -44,7 +44,7 @@ body{
     font-weight: bolder;
     opacity: 0.03;
     overflow: hidden;
-    bottom: 0em;
+    bottom: 1em;
     right: -1em;
     z-index: -1000;
 }
