@@ -7,9 +7,10 @@
     <title>Shubham Talawadekar | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Assets/s-icon1.png" type="image/x-icon">
+    <script defer src="app.js"></script>
 </head>
 <body>
-    <div class="watermark">SHUBH</div>
+    <div class="watermark" aria-hidden="true">SHUBH</div>
     
     <header>
         <div>
@@ -98,19 +99,5 @@
         </ul>
     </div>
     </footer>
-
-    <script>
-        var theme = document.getElementById("theme");
-        theme.onclick = function(){
-            document.body.classList.toggle("white-theme");
-        if(document.body.classList.contains("white-theme")){
-            theme.src="assets/moon.png";
-            profile.src="assets/profile2.svg"
-        }else{
-            theme.src="assets/sun.png";
-            profile.src="assets/profile.svg"
-        }
-    }
-    </script>
 </body>
 </html>
